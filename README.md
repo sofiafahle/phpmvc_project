@@ -11,7 +11,7 @@ Instruction for the project can be found at [dbwebb.se](http://dbwebb.se/phpmvc/
 This project is based on Anax-MVC which has external dependencies. Install these using composer and the composer.json file in the base directory.
 
 ### Config you database connection details
-Edit the connection details for your database using one of the example config files found in vendor/mos/cdatabase/webroot. Place your config file in app/config.
+Edit the connection details for your database in the config_mysql.php file in app/config, or using one of the example config files found in vendor/mos/cdatabase/webroot. Place the file in app/config. The installation is tested for MySQL. If you switch config file to for example config_sqlite.php you must update the link in src/DI/CDIFactoryDefault. Search for 'mysql'.
 
 ### Use updated CFormElement
 This project uses Markdown for all user content, and for ease of use has a live preview editor. This requires an updated version of CFormElement. You will find it in your app/src folder. Move it from app/src/HTMLForm and replace the existing one in vendor/mos/cform/src/HTMLform.
