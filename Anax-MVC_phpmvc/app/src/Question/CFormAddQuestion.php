@@ -83,12 +83,14 @@ class CFormAddQuestion extends \Mos\HTMLForm\CForm
 		
 		$this->questionID = $this->question->db->lastInsertId();
 		
-		$this->di->db->insert(
-				'tag2question',
-				['questionID', 'tagID']
-			);
-		foreach ($this->Value('tags') as $tag) {
-			$this->di->db->execute([$this->questionID, $tag]);
+		if($this->Value('tags')[0] != null) {
+			foreach ($this->Value('tags') as $tag => $id) {
+				 $this->di->db->insert(
+					'tag2question',
+					['tagID', 'questionID']
+				);
+				$this->di->db->execute([$id, $questionID]);
+			}
 		}
 		
         return true;
