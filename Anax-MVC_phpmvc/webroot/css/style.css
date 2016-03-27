@@ -1,0 +1,125 @@
+/**
+ * General elements
+ */
+
+@import url(figure.css);
+
+body {
+    color: #333;
+    font-family: arial, sans-serif;
+    overflow-y: scroll;
+}
+
+h1 {
+    font-size: 2.2em;
+}
+
+
+/**
+ * Layout of the main page elements
+ */
+#wrapper {
+    margin: 0 auto;
+    width: 980px;
+    padding: 10px;
+}
+
+
+/**
+ * Layout for header
+ */
+#header {
+    position: relative;
+    margin-bottom: 30px;
+	margin-top: 20px;
+	text-align: center;
+}
+
+.sitelogo {
+    width: 50px;
+	margin-right: 10px;
+}
+
+.sitetitle {
+	vertical-align: bottom;
+    font-size: 48px;
+}
+
+.siteslogan {
+	display: block;
+    font-style: italic;
+    color: #666;
+}
+
+
+/**
+ * Layout for main
+ */
+#main {
+    min-height: 20em;
+}
+
+
+/**
+ * Layout for footer
+ */
+#footer {
+    margin-top: 40px;
+    border-top: 1px solid #ccc;
+    padding-top: 22px;
+}
+
+.sitefooter {
+    color: #666;
+}
+
+
+/**
+ * For articles
+ */
+.article1 {
+    padding-right: 1em;
+}
+
+.article1 h1,
+.article1 h2 {
+    border-bottom: 1px solid #ccc;
+}
+
+.byline {
+    margin-top: 44px;
+    border-top: 1px dashed #ccc;
+    padding-top: 22px;
+    color: #666;
+}
+
+.byline p {
+    margin-top: 0;
+}
+
+.byline img {
+    float: left;
+    width: 100px;
+    margin-right: 20px;
+}
+
+/* HELPERS */
+.right {
+    float: right;
+}
+.left {
+    float: left;
+}
+
+.clearfix:before,
+.clearfix:after {
+	content: "";
+	display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+
+.inline {
+	display: inline-block;
+}

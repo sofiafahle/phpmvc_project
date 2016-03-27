@@ -1,0 +1,1 @@
+#Welcome to our Q&A-forum!Join a community of experienced, novice and aspiring murderers helping each other stay under the radar since 2016.
