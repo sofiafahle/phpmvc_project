@@ -100,7 +100,7 @@ class TagsController implements \Anax\DI\IInjectionAware
 	 
 	 	$this->theme->setTitle($tag->title);
 		$this->views->add('question/list', [
-			'title' => $tag->title,
+			'text' => '<h1>' . $tag->title . '</h1>',
 			'questions' => $questions
 		]);
 	}
