@@ -65,18 +65,6 @@ class CFormUpdateUser extends \Mos\HTMLForm\CForm
                 'label'       => 'About you:',
 				'value' 	  => $user->about,
 			],
-			'inactivate' => [
-                'type'        => 'checkbox',
-                'label'       => 'Inactivate account:',
-				'value' 	  => true,
-				'description' => 'List yourself as inactive on site. You can reactivate at any point.'
-			],
-			'delete' => [
-                'type'        => 'checkbox',
-                'label'       => 'Delete account:',
-				'value' 	  => true,
-				'description' => 'Delete your account. Your account will be removed from the site. Contact admin if you wish to retrieve it again.'
-			],
             'submit' => [
                 'type'      => 'submit',
                 'callback'  => [$this, 'callbackSubmit'],
@@ -107,9 +95,6 @@ class CFormUpdateUser extends \Mos\HTMLForm\CForm
     {
 		$now = gmdate('Y-m-d H:i:s');
 		
-		$inactive = $this->Value('inactivate') ? $now : null;
-		$deleted = $this->Value('delete') ? $now : null;
-		
 		$this->user->save([
 			'id'  => $this->Value('id'),
 			'email' => $this->Value('email'),
@@ -117,8 +102,6 @@ class CFormUpdateUser extends \Mos\HTMLForm\CForm
 			'about' => htmlentities($this->Value('about')),
 			'password' => password_hash($this->Value('password'), PASSWORD_DEFAULT),
 			'updated' => $now,
-			'inactivated' => $inactive,
-			'deleted' => $deleted,
 		]);
 
         return true;
