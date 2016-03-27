@@ -7,3 +7,21 @@ Instruction for the project can be found at [dbwebb.se](http://dbwebb.se/phpmvc/
 
 ## Installation
 
+### Download and install external dependecies
+This project is based on Anax-MVC which has external dependencies. Install these using composer and the composer.json file in the base directory.
+
+### Config you database connection details
+Edit the connection details for your database using one of the example config files found in vendor/mos/cdatabase/webroot. Place your config file in app/config.
+
+### Use updated CFormElement
+This project uses Markdown for all user content, and for ease of use has a live preview editor. This requires an updated version of CFormElement. You will find it in your app/src folder. Move it from app/src/HTMLForm and replace the existing one in vendor/mos/cform/src/HTMLform.
+
+### Setup the database and test content
+If you need a rewrite base you can set it in webroot/.htaccess. Point your browser to webroot/setup for setting up the database with the example content. This setup should be protected by an admin login. To do so, after setup, remove the comments found in the route 'setup' in webroot/index. The test admin logs in with username "admin" and password "admin".
+
+The repository ships as a test forum, We Gonna Take Over The World, inhabited by the characters from popular board game Cluedo. To change the base setup for the database tables, see setup files in respective folder in app/src. To change basic layout settings, se theme_grid.php file in app/config.
+
+
+If any questions should arise, please contact me for assistance.
+sofiafahlesson@live.se
+
