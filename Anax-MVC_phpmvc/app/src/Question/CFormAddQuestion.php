@@ -89,7 +89,7 @@ class CFormAddQuestion extends \Mos\HTMLForm\CForm
 					'tag2question',
 					['tagID', 'questionID']
 				);
-				$this->di->db->execute([$id, $questionID]);
+				$this->di->db->execute([$id, $this->questionID]);
 			}
 		}
 		
